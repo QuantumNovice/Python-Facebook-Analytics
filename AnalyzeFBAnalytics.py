@@ -2,6 +2,7 @@
 from matplotlib import pyplot as plt
 import random
 
+# This opens up the facebook analytics and loads it into <code>data</code> variable.
 with open('nm.csv', 'r') as fd:
     data = fd.readlines()
 
@@ -14,6 +15,10 @@ for line in lines:
 
 
 def get_category(index):
+    '''
+    Returns the category you want
+    e.g Total Likes, Engagements in US
+    '''
     values = []
     for i in data:
         values.append(i[index])
